@@ -32,16 +32,16 @@
                     <form action="<?= BASEURL ?>/DemoController/search" method="post">
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <input type="text" class="form-control form-control-sm" name="last_name" placeholder="姓"
-                                       value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : '' ?>">
+                                <input type="text" id="last_name" class="form-control form-control-sm" name="last_name"
+                                       placeholder="姓" value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : '' ?>">
                             </div>
                             <div class="form-group col-md-3">
-                                <input type="text" class="form-control form-control-sm" name="first_name" placeholder="名"
-                                       value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : '' ?>">
+                                <input type="text" id="first_name" class="form-control form-control-sm" name="first_name"
+                                       placeholder="名" value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : '' ?>">
                             </div>
                             <div class="form-group col-md-3">
-                                <input type="text" class="form-control form-control-sm" name="last_name_kana" placeholder="姓カナ"
-                                       value="<?= (isset($_POST['last_name_kana'])) ? $_POST['last_name_kana'] : '' ?>">
+                                <input type="text" id="last_name_kana" class="form-control form-control-sm" name="last_name_kana"
+                                       placeholder="姓カナ" value="<?= (isset($_POST['last_name_kana'])) ? $_POST['last_name_kana'] : '' ?>">
                             </div>
                             <div class="form-group col-md-3">
                                 <input type="text" class="form-control form-control-sm" name="first_name_kana" placeholder="名カナ"
@@ -50,11 +50,11 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <input type="number" class="form-control form-control-sm" name="emp_num" placeholder="社員番号" min="0"
-                                       value="<?= (isset($_POST['emp_num'])) ? $_POST['emp_num'] : '' ?>">
+                                <input type="number" id="emp_num" class="form-control form-control-sm" name="emp_num"
+                                       placeholder="社員番号" min="0" value="<?= (isset($_POST['emp_num'])) ? $_POST['emp_num'] : '' ?>">
                             </div>
                             <div class="form-group col-md-3">
-                                <select name="department" class="form-control form-control-sm">
+                                <select name="department" id="department" class="form-control form-control-sm">
                                     <option value="" disabled selected>部署</option>
                                     <?php
                                         foreach ($this->department as $id => $name) {
@@ -68,7 +68,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <select name="position" class="form-control form-control-sm">
+                                <select name="position" id="position" class="form-control form-control-sm">
                                     <option value="" disabled selected style='display:none;'>役職</option>
                                     <?php
                                         foreach ($this->position as $id => $name) {
@@ -82,21 +82,21 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
-                                <input type="text" class="form-control form-control-sm" name="address" placeholder="住所"
-                                       value="<?= (isset($_POST['address'])) ? $_POST['address'] : '' ?>">
+                                <input type="text" id="address" class="form-control form-control-sm" name="address"
+                                       placeholder="住所" value="<?= (isset($_POST['address'])) ? $_POST['address'] : '' ?>">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="male"
+                                    <input id="male" class="form-check-input" type="checkbox" name="male"
                                         <?php if (isset($_POST['male'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="male">男性</label>
                                 </div>
                             </div>
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="formg-check-input" type="checkbox" name="female"
+                                    <input id="female" class="form-check-input" type="checkbox" name="female"
                                         <?php if (isset($_POST['female'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="female">女性</label>
                                 </div>
@@ -104,28 +104,28 @@
                             <div class="form-group col-md-1"></div>
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="full_time"
+                                    <input id="full_time" class="form-check-input" type="checkbox" name="full_time"
                                         <?php if (isset($_POST['full_time'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="full_time">正社員</label>
                                 </div>
                             </div>
                             <div class="form-group col-md-2 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="formg-check-input" type="checkbox" name="contract"
+                                    <input id="contract" class="form-check-input" type="checkbox" name="contract"
                                         <?php if (isset($_POST['contract'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="contract">契約社員</label>
                                 </div>
                             </div>
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="formg-check-input" type="checkbox" name="mid_career"
+                                    <input id="mid_career" class="form-check-input" type="checkbox" name="mid_career"
                                         <?php if (isset($_POST['mid_career'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="mid_career">中途</label>
                                 </div>
                             </div>
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="new_graduate"
+                                    <input id="new_graduate" class="form-check-input" type="checkbox" name="new_graduate"
                                         <?php if (isset($_POST['new_graduate'])) echo "checked"; ?>>
                                     <label class="form-check-label" for="new_graduate">新卒</label>
                                 </div>
@@ -145,31 +145,45 @@
     <div class="row mt-4 mb-2">
         <div class="col-md-6">検索結果：<?= count($this->users); ?>件</div>
         <div class="col-md-6 text-right">
-            <button type="button" class="btn btn-sm btn-outline-primary px-2">社員登録</button>
+            <button type="button" class="btn btn-sm btn-outline-primary px-2" data-toggle="modal" data-target="#registerModal">社員登録</button>
         </div>
     </div>
-    <table class="table">
+    <table class="table table-sm table-hover">
         <thead class="thead-light">
         <tr>
             <th scope="col">社員番号</th>
             <th scope="col">名前</th>
+            <th scope="col">名前カナ</th>
             <th scope="col">部署</th>
             <th scope="col">役職</th>
             <th scope="col">連絡先</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($this->users as $user): ?>
             <tr>
-                <td><?= $user->emp_num ?></td>
+                <td class="pl-4"><?= $user->emp_num ?></td>
                 <td><?= $user->last_name . "\t" . $user->first_name ?></td>
+                <td><?= $user->last_name_kana . "\t" . $user->first_name_kana ?></td>
                 <td><?= $this->department[$user->department_id] ?></td>
                 <td><?= $this->position[$user->position_id] ?></td>
                 <td><?= $user->phone_num ?></td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal"
+                            data-target="#editModal" value="<?= $user->user_id ?>">
+                        編集
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger" value="<?= $user->user_id ?>">削除</button>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
+    <?php include 'DemoModal.php'; ?>
 </main>
 </body>
 </html>

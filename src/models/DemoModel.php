@@ -77,4 +77,13 @@
             }
         }
 
+        // 給与リストの取得
+        public function getSalary()
+        {
+            $sql = "select * from mst_salary where 'del_flg' = 0;";
+            if ($this->query($sql, [])) {
+                return $this->fetchAll();
+            }
+        }
+
     }
