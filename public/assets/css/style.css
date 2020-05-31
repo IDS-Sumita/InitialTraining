@@ -1,0 +1,9 @@
+* {
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+h4 {
+    border-bottom: 1px solid #cce5ff;
+    border-left: 10px solid #cce5ff;
+    padding: 7px;
+}
