@@ -9,7 +9,7 @@
 
         public function index()
         {
-
+            print 1;
         }
 
         public function search()
