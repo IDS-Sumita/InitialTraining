@@ -17,10 +17,10 @@
                     <a class="dropdown-item" href="javascript:void(0)" onclick="location.href='<?= BASEURL ?>'">
                         Demo
                     </a>
-                    <a class="dropdown-item" href="javascript:void(0)" onclick="location.href='<?= BASEURL ?>'">
-                        Shibuya
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="location.href='<?= BASEURL ?>/MrCbController/index'">
+                        MrCb
                     </a>
-                    <a class="dropdown-item" href="javascript:void(0)" onclick="location.href='<?= BASEURL ?>'">
+                    <a class="dropdown-item" href="javascript:void(0)" onclick="location.href='<?= BASEURL ?>/FukasakuController/index'">
                         Fukasaku
                     </a>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 
-    class ShibuyaController extends framework
+    class MrCbController extends framework
     {
         public function __construct()
         {
