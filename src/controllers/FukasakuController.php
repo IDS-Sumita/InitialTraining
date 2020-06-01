@@ -9,7 +9,7 @@
 
         public function index()
         {
-
+            echo "Hello World";
         }
 
         public function search()
