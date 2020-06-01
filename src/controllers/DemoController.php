@@ -49,7 +49,7 @@
         public function register()
         {
             $error = [];
-//            error_log(print_r($_POST, true), 3, "../log/debug.log");
+            error_log(print_r($_POST, true), 3, "../log/debug.log");
             // バリデーション
             // 存在チェック
             if (empty($_POST['emp_num'])) $error['emp_num'] = 'required';
@@ -66,9 +66,28 @@
             if (!empty($_POST['mail']) && !preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $_POST['mail'])) {
                 $error['mail'] = 'check';
             }
+            // バリデーションの結果を返却
+            if (!empty($error)) echo json_encode($error);
 
-
-            echo json_encode($error);
+            // 登録用データの作成
+            $register_data = $_POST;
+            $today = date('Y-m-d H:i:s');
+            // チェックボックス系のデータを正しいデータに変換
+            $register_data['user_auth'] = (isset($register_data['user_auth']) && $register_data['user_auth'] == 'on') ? 1 : 0;
+            if (isset($register_data['chk_written_oath']) && $register_data['chk_written_oath'] == 'on') $register_data['chk_written_oath'] = $today;
+            if (isset($register_data['chk_instructions']) && $register_data['chk_instructions'] == 'on') $register_data['chk_instructions'] = $today;
+            if (isset($register_data['chk_emp_agrmnt']) && $register_data['chk_emp_agrmnt'] == 'on') $register_data['chk_emp_agrmnt'] = $today;
+            if (isset($register_data['chk_notice_of_emp']) && $register_data['chk_notice_of_emp'] == 'on') $register_data['chk_notice_of_emp'] = $today;
+            if (isset($register_data['chk_hired_emp_agrmnt']) && $register_data['chk_hired_emp_agrmnt'] == 'on') $register_data['chk_hired_emp_agrmnt'] = $today;
+            $register_data['update_pass_date'] = $today;
+            $register_data['update_pass_flg'] = 0;
+            $register_data['del_flg'] = 0;
+            $register_data['version'] = 1;
+            $register_data['create_date'] = $today;
+            $register_data['create_user'] = 1;
+            $register_data['update_date'] = $today;
+            $register_data['update_user'] = 1;
+            error_log(print_r($register_data, true), 3, "../log/debug.log");
         }
 
         public function edit()
