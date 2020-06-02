@@ -110,10 +110,21 @@
                                     <?php if(isset($_POST['full_time'])) echo "checked" ?>>
                                     <label class="form-check-label" for="full_time">正社員</label>
                             </div>
-                            <div class="form-group col-md-1 text-center">
+                            <div class="form-group col-md-2 text-center">
                                <input type="checkbox" class="form-check-input" id="contract"name="contract"
                                     <?php if(isset($_POST['contract'])) echo "checked" ?>>
                                     <label class="form-check-label" for="contract">契約社員</label>
+                            </div>
+                            <div class="from-group col-md-1"></div>
+                            <div class="form-group col-md-1 text-center">
+                               <input type="checkbox" class="form-check-input" id="mid_career"name="mid_career"
+                                    <?php if(isset($_POST['mid_career'])) echo "checked" ?>>
+                                    <label class="form-check-label" for="mid_career">中途</label>
+                            </div>
+                            <div class="form-group col-md-1 text-center">
+                               <input type="checkbox" class="form-check-input" id="new_graduates"name="new-graduates"
+                                    <?php if(isset($_POST['new-graduates'])) echo "checked" ?>>
+                                    <label class="form-check-label" for="new_graduates">新卒</label>
                             </div>
                         </div>
                     </div>
