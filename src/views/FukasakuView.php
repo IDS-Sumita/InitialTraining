@@ -21,13 +21,15 @@
               <div class="col">検索条件</div>
               <div class="col text-right">
                     <button type="button" class="btn btn-info p-0 text-right" id="serach-header"
-                            data-traggle="collspace" data-target="#collspace" aria-expanded="true"
-                             aria-controls="collspaceExample">▼閉じる
+                            data-traggle="collspace" data-target="#collspaceOne" aria-expanded="true"
+                             aria-controls="collspaceOne">▼閉じる
                     </button>           
                 </div>
           </div>
 
-          
+            <div id="collspaceOne" class="collspace show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <
+            </div>
       </div>
     </div>
 </main>
