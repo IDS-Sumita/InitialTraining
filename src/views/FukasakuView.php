@@ -47,13 +47,28 @@
                            <input type="text" id="first_name_kana" class="form-control form-control-sm" name="first_name_kana"
                                   placeholder="名かな"  value="<?= (isset($_POST['first_name_kana'])) ? $_POST['first_name_kana'] : '' ?>">
                         </div>
-                        <div class="form-row">
+                    </div>
+                    <div class="form-row">
                            <div class="form-group col-md-3">
                                <input type="number" id="emp_num" class="form-control form-control-sm" name="emp_num"
-                                       placeholder="社員番号" min="0"  max="11"
+                                       placeholder="社員番号" min="0" 
                                        value="<?= (isset($_POST['emp_num'])) ? $_POST['emp_num'] : '' ?>">
                            </div>
-                    </div>
+                           <div class="form-group col-md-3">
+                               <select name="department" id="department" class="form-control form-control-sm">
+                                   <option value=""  disabled>部署</option>
+                                    <?php
+                                     foreach($this->department as $id => $name){
+                                         if(isset($_POST['department']) && $_POST['department'] == $id){
+                                             echo "<option value=\"$id\" selected>$name</option>";
+                                         }else{
+                                             echo "<option value=\"$id\" selected>$name</option>";
+                                         }
+                                     }
+                                    ?>
+                               </select>
+                           </div>
+                        </div>
                 </div>
             </div>
       </div>
