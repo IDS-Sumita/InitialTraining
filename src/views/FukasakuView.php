@@ -115,7 +115,6 @@
                                     <?php if(isset($_POST['contract'])) echo "checked" ?>>
                                     <label class="form-check-label" for="contract">契約社員</label>
                             </div>
-                            <div class="from-group col-md-1"></div>
                             <div class="form-group col-md-1 text-center">
                                <input type="checkbox" class="form-check-input" id="mid_career"name="mid_career"
                                     <?php if(isset($_POST['mid_career'])) echo "checked" ?>>
@@ -127,6 +126,10 @@
                                     <label class="form-check-label" for="new_graduates">新卒</label>
                             </div>
                         </div>
+                        <div class="form-row justify-content-center">
+                           <button type="button" class="btn btn-sm btn-outline-secondary" id="search-clear">クリア</button>
+                           <button type="submit" class="btn btn-sm btn-info">検索</button>
+                        <div 
                     </div>
                 </div>
             </div>
