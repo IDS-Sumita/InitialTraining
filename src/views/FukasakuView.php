@@ -56,7 +56,7 @@
                            </div>
                            <div class="form-group col-md-3">
                                <select name="department" id="department" class="form-control form-control-sm">
-                                   <option value=""  disabled>部署</option>
+                                   <option value=""  disabled selected>部署</option>
                                     <?php
                                      foreach($this->department as $id => $name){
                                          if(isset($_POST['department']) && $_POST['department'] == $id){
