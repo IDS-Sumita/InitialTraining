@@ -68,7 +68,21 @@
                                     ?>
                                </select>
                            </div>
-                        </div>
+                           <div class="form-group col-md-3">
+                               <select name="position" id="position" class="form-control form-control-sm">
+                                   <option value=""  disabled selected>役職</option>
+                                    <?php
+                                     foreach($this->department as $id => $name){
+                                         if(isset($_POST['position']) && $_POST['position'] == $id){
+                                             echo "<option value=\"$id\" selected>$name</option>";
+                                         }else{
+                                             echo "<option value=\"$id\">$name</option>";
+                                         }
+                                     }
+                                    ?>
+                               </select>
+                            </div>   
+                    </div>
                 </div>
             </div>
       </div>
