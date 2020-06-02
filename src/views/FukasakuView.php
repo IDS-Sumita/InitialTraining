@@ -100,9 +100,15 @@
                             <div class="form-group col-md-1 text-center">
                                 <div class="form-check form-check-inline">
                                     <input type="checkbox" class="form-check-input" id="female"name="female"
-                                           <?php if(isset($_POST['male'])) echo "checked" ?>>
+                                    <?php if(isset($_POST['male'])) echo "checked" ?>>
                                     <label class="form-check-label" for="female">女性</label>
                                 </div>
+                            </div>
+                            <div class="from-group col-md-1"></div>
+                            <div class="form-group col-md-1 text-center">
+                               <input type="checkbox" class="form-check-input" id="full_time"name="full_time"
+                                    <?php if(isset($_POST['full_time'])) echo "checked" ?>>
+                                    <label class="form-check-label" for="full_time">正社員</label>
                             </div>
                         </div>
                     </div>
