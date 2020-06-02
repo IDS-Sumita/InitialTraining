@@ -9,7 +9,10 @@
 
         public function index()
         {
-            echo "Hello World";
+           // ユーザーリストの取得
+           $this->users = $this->model->getUsers();
+           // Viewを表示
+           $this->view("fukasakuview");
         }
 
         public function search()
