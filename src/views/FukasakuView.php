@@ -62,7 +62,7 @@
                                          if(isset($_POST['department']) && $_POST['department'] == $id){
                                              echo "<option value=\"$id\" selected>$name</option>";
                                          }else{
-                                             echo "<option value=\"$id\" selected>$name</option>";
+                                             echo "<option value=\"$id\">$name</option>";
                                          }
                                      }
                                     ?>
