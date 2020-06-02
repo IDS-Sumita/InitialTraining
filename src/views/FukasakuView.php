@@ -29,7 +29,7 @@
 
             <div id="collspaceOne" class="collspace show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body pb-0">
-                  <form action="<?= BASEURL ?>/DemoController/serach" method="post">
+                  <form action="<?= BASEURL ?>/FukasakuController/serach" method="post">
                     <div class="form-row">
                        <div class="form-group col-md-3">
                            <input type="text" id="last_name" class="form-control form-control-sm" name="last_name"

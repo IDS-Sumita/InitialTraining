@@ -11,12 +11,12 @@
         {
           
            // Viewを表示
-           $this->view("fukasakuview");
+           $this->view("Fukasakuview");
         }
 
         public function search()
         {
-
+            $this->view("Fukasakuview");
         }
 
         public function register()
