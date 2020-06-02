@@ -127,9 +127,8 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center">
-                           <button type="button" class="btn btn-sm btn-outline-secondary" id="search-clear">クリア</button>
-                           <button type="submit" class="btn btn-sm btn-info">検索</button>
-                        <div 
+                           <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill mx-2" id="search-clear">クリア</button>
+                           <button type="submit" class="btn btn-sm btn-info rounded-pill mx-2">検索</button>
                     </div>
                 </div>
             </div>
