@@ -97,6 +97,13 @@
                                     <label class="form-check-label" for="male">男性</label>
                                 </div>
                             </div>
+                            <div class="form-group col-md-1 text-center">
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="female"name="female"
+                                           <?php if(isset($_POST['male'])) echo "checked" ?>>
+                                    <label class="form-check-label" for="female">女性</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
