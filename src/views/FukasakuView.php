@@ -28,7 +28,27 @@
           </div>
 
             <div id="collspaceOne" class="collspace show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <
+                <div class="card-body pb-0">
+                  <form action="<?= BASEURL ?>/DemoController/serach" method="post">
+                    <div class="form-row">
+                       <div class="form-group col-md-3">
+                           <input type="text" id="last_name" class="form-control form-control-sm" name="last_name"
+                                  placeholder="姓"  value="<?= (isset($_POST['last_name'])) ? $_POST['last_name'] : '' ?>">
+                        </div>
+                        <div class="form-group col-md-3">
+                           <input type="text" id="first_name" class="form-control form-control-sm" name="first_name"
+                                  placeholder="名"  value="<?= (isset($_POST['first_name'])) ? $_POST['first_name'] : '' ?>">
+                        </div>
+                        <div class="form-group col-md-3">
+                           <input type="text" id="last_name_kana" class="form-control form-control-sm" name="last_name_kana"
+                                  placeholder="姓"  value="<?= (isset($_POST['last_name_kana'])) ? $_POST['last_name_kana'] : '' ?>">
+                        </div>
+                        <div class="form-group col-md-3">
+                           <input type="text" id="first_name_kana" class="form-control form-control-sm" name="first_name_kana"
+                                  placeholder="姓"  value="<?= (isset($_POST['first_name_kana'])) ? $_POST['first_name_kana'] : '' ?>">
+                        </div>
+                    </div>
+                </div>
             </div>
       </div>
     </div>
