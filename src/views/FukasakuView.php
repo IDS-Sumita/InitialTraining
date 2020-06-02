@@ -110,7 +110,6 @@
                                     <?php if(isset($_POST['full_time'])) echo "checked" ?>>
                                     <label class="form-check-label" for="full_time">正社員</label>
                             </div>
-                            <div class="from-group col-md-1"></div>
                             <div class="form-group col-md-1 text-center">
                                <input type="checkbox" class="form-check-input" id="contract"name="contract"
                                     <?php if(isset($_POST['contract'])) echo "checked" ?>>
