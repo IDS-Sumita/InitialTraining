@@ -87,6 +87,17 @@
                                        placeholder="住所" 
                                        value="<?= (isset($_POST['addres'])) ? $_POST['addres'] : '' ?>">
                             </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-1 text-center">
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="male"name="male"
+                                           <?php if(isset($_POST['male'])) echo "checked" ?>>
+                                    <label class="form-check-label" for="male">男性</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
