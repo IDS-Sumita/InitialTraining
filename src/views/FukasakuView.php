@@ -47,6 +47,12 @@
                            <input type="text" id="first_name_kana" class="form-control form-control-sm" name="first_name_kana"
                                   placeholder="名かな"  value="<?= (isset($_POST['first_name_kana'])) ? $_POST['first_name_kana'] : '' ?>">
                         </div>
+                        <div class="form-row">
+                           <div class="form -group col-md-3">
+                               <input type="number" id="emp_num" class="form-control form-control-sm" name="emp_num"
+                                       placeholder="社員番号" min="0" max="11" 
+                                       value="<?= (isset($_POST['first_name_kana'])) ? $_POST['first_name_kana'] : '' ?>">
+                           </div>
                     </div>
                 </div>
             </div>
