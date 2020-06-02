@@ -9,8 +9,7 @@
 
         public function index()
         {
-           // ユーザーリストの取得
-           $this->users = $this->model->getUsers();
+          
            // Viewを表示
            $this->view("fukasakuview");
         }
