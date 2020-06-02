@@ -70,7 +70,7 @@
                            </div>
                            <div class="form-group col-md-3">
                                <select name="position" id="position" class="form-control form-control-sm">
-                                   <option value=""  disabled selected>役職</option>
+                                   <option value=""  disabled selected style='display:none;'>役職</option>
                                     <?php
                                      foreach($this->department as $id => $name){
                                          if(isset($_POST['position']) && $_POST['position'] == $id){
@@ -81,7 +81,12 @@
                                      }
                                     ?>
                                </select>
-                            </div>   
+                            </div> 
+                            <div class="form-gruop col-md-3">
+                            <input type="text" id="addres" class="form-control form-control-sm" name="addres"
+                                       placeholder="住所" 
+                                       value="<?= (isset($_POST['addres'])) ? $_POST['addres'] : '' ?>">
+                            </div>
                     </div>
                 </div>
             </div>
