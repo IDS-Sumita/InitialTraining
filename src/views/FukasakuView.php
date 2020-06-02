@@ -48,7 +48,7 @@
                                   placeholder="名かな"  value="<?= (isset($_POST['first_name_kana'])) ? $_POST['first_name_kana'] : '' ?>">
                         </div>
                         <div class="form-row">
-                           <div class="form -group col-md-3">
+                           <div class="form-group col-md-3">
                                <input type="number" id="emp_num" class="form-control form-control-sm" name="emp_num"
                                        placeholder="社員番号" min="0"  
                                        value="<?= (isset($_POST['emp_num'])) ? $_POST['emp_num'] : '' ?>">
