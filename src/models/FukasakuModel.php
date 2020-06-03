@@ -4,7 +4,7 @@
     {
         public $db = 'fukasakudb';
 
-        public function getUser($user_id)
+        public function GetUser($user_id)
         {
             $sql="select * form mst_user where 'del_flg' = 0and 'user_id' = $user_id";
             if($this->query($sql,[])){
@@ -12,7 +12,7 @@
             }
         }
         //ユーザーリストを取得
-        public function getUsers()
+        public function GetUsers()
         {
             $sql="select * from mst_user where 'del_flg' = 0;";
             if($this->query($sql,[])){
@@ -21,7 +21,7 @@
         }
 
         //事業部リストを取得
-        public function department_select()
+        public function DepartmentSelect()
         {
             $sql= "select * from mst_department where 'del-flg' = 0;";
             if($this->query($sql,[])){
@@ -29,7 +29,7 @@
             }
         }
         //役職リストを取得
-        public function position_select()
+        public function PositionSelect()
         {
             $sql="select * from mst_position where 'del-flg' = 0;";
             if($this->query($sql,[])){
@@ -37,7 +37,7 @@
             }
         }
         //給与リストを取得
-        public function salary_select()
+        public function SalarySelect()
         {
             $sql= "select * from mst_salary where 'del-flg' = 0;";
             if($this->query($sql,[])){
@@ -45,7 +45,7 @@
             }
         }
 
-        public function searchusers($data = [])
+        public function SearchUsers($data = [])
         {
             //SQLのもとを作成
             $sql= "select * from mst_user where 'del-flg' = 0";

@@ -22,7 +22,7 @@
               <div class="col text-right">
                     <button type="button" class="btn btn-info p-0 text-right" id="search-header"
                             data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                             aria-controls="collapseOne">▼閉じる
+                            aria-controls="collapseOne">▼閉じる
                     </button>           
                 </div>
           </div>
@@ -82,7 +82,7 @@
                                     ?>
                                </select>
                             </div> 
-                            <div class="form-gruop col-md-3">
+                            <div class="form-group col-md-3">
                             <input type="text" id="addres" class="form-control form-control-sm" name="addres"
                                        placeholder="住所" 
                                        value="<?= (isset($_POST['addres'])) ? $_POST['addres'] : '' ?>">
@@ -156,7 +156,7 @@
         <tbody>
         <?php foreach($this->users as $user): ?>
             <tr>
-               <td class="pl-4"<?=$user->emp-num ?>></td>
+               <td class="pl-4"<?=$user->emp_num ?>></td>
                <td><?=$user->last_name."\t".$user->last_name_kana ?></td>
                <td><?=$user->first_name."\t".$user->first_name_kana ?></td>
                <td><?=$this->department[$user->department_id] ?></td>
