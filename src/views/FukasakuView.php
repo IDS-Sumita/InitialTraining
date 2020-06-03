@@ -137,7 +137,7 @@
     <div class="row mt-4 mb-2">
         <div class="col-md-6">検索結果：<?= count($this->users); ?>件</div>
         <div class="col-md-6 text-right">
-            <button type="button" class="btn btn-lg btn-outline-info px-2" data-toggle="modal" data-target="#regsterModal">社員登録</button>
+            <button type="button" class="btn btn-sm btn-outline-info px-2" data-toggle="modal" data-target="#regsterModal">社員登録</button>
         </div>
     </div>
     <table class="table table-sm table-hover"> 
