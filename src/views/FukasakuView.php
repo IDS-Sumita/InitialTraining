@@ -154,7 +154,7 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach($this->user as $user): ?>
+        <?php foreach($this->users as $user): ?>
             <tr>
                <td class="pl-4"<?=$user->emp-num ?>></td>
                <td><?=$user->last_name."\t".$user->last_name_kana ?></td>
